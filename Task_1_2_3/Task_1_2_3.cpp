@@ -31,30 +31,51 @@ class Task_1 {
   }
 
   bool findNumber(char* Number, char* input, int index, int& counterForNumber,
-                   int& last_i) {
+                  int& last_i) {
     bool NumberFound = false;
     bool dotFound = false;
     bool minusFound = false;
-    bool plusFound = false;               
+    bool plusFound = false;
+
     for (int i = last_i; i <= index; ++i) {
       last_i = i;
+      // если символ это +-. 0...9 то присваиваем число массиву и (*) проверяем
+      // следующее на 0...9 или '.'
       if (checkForEquality(input[i])) {
-        if(input[i] == '.'){
-            dotFound = true;
+        // если '.' это первый символ то скипаем итерацию
+        if (input[i] == '.' && counterForNumber == 0) {
+          continue;
         }
-        if(input[i] == '+'){
-            plusFound = true;
+        // проверка что в числе всего одна '.'
+        if (input[i] == '.' && dotFound) {
+          ++last_i;
+          break;
         }
-        if(input[i] == '-'){
-            minusFound = true;
+        // проверка что после первой '.' идет число, если нет то прекращаем цикл
+        // и обнуляем массив
+        if (input[i] == '.' && !checkForEquality(input[i + 1], 10)) {
+          for (int k = 0; k < counterForNumber; ++k) {
+            Number[k] = ' ';
+          }
+          ++last_i;
+          break;
         }
-        if (!checkForEquality(input[i + 1], 10) && (dotFound || plusFound || minusFound)) {
-            break;
+        // проверка что + - . встретились в числе
+        if (input[i] == '.') {
+          dotFound = true;
         }
+        if (input[i] == '+') {
+          plusFound = true;
+        }
+        if (input[i] == '-') {
+          minusFound = true;
+        }
+        // присваиваем массиву число
         Number[counterForNumber] = input[i];
         ++counterForNumber;
         NumberFound = true;
-        if (checkForEquality(input[i + 1], 10)) {
+        // если следующее число не является 0...9 или '.' то прекращаем цикл (*)
+        if (checkForEquality(input[i + 1], 11)) {
           continue;
         } else {
           ++last_i;
@@ -81,7 +102,7 @@ class Task_1 {
     int last_i = 0;
     char* input = CorrectInputCharArray(index);
     char* Number = new char[80];
-    std::cout << "Найденные числа с фиксированной запятой: \n";
+    std::cout << "Найденные числа с фиксированной точкой: \n";
     do {
       NumberFound = findNumber(Number, input, index, counterForNumber, last_i);
       outputResult(Number, counterForNumber, NumberFound);
