@@ -1,20 +1,15 @@
-# Минимальная версия CMake
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.22)
+project(Project)
 
-# Имя проекта
-project(MyProject)
+# Обычное выполнение
+add_executable(Task_1_2_3 main.cpp)
 
-# Установка стандарта C++
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# AddressSanitizer
+add_executable(AddressSan main.cpp)
+target_compile_options(AddressSan PRIVATE -fsanitize=address)
+target_link_options(AddressSan PRIVATE -fsanitize=address)
 
-# Добавляем флаги компиляции
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -fsanitize=thread -fno-omit-frame-pointer")
-
-# Указываем список исходных файлов
-set(SOURCES
-    Task_1_2_3.cpp
-)
-
-# Создаём исполняемый файл
-add_executable(my_program ${SOURCES})
+# ThreadSanitizer
+add_executable(ThreadSan main.cpp)
+target_compile_options(ThreadSan PRIVATE -fsanitize=thread)
+target_link_options(ThreadSan PRIVATE -fsanitize=thread)

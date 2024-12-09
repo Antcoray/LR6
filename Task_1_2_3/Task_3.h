@@ -115,7 +115,7 @@ class Task_3 {
     while (true) {
       std::cin.ignore();
       int index = 0;
-      char* input = CorrectInputCharArray(index);
+     char* input = CorrectInputCharArray(index);
       char* NewText = nullptr;
       std::cout << "Введите номер функции, которую хотите использовать\n [1 - "
                    "копирование / 2 - сравнение / 3 - объединение] \n";
@@ -135,7 +135,7 @@ class Task_3 {
         if (compare(input, index, anotherInput, anotherIndex, K)) {
           std::cout << "Строки равны\n";
         } else {
-          std::cout << "Строки отличаются на " << K << " символов\n";
+          std::cout << "Строки отличаются на " << K << " символ(ов)\n";
         }
         delete[] anotherInput;
       }
@@ -155,7 +155,6 @@ class Task_3 {
       delete[] input;
       std::cout << "[1 - да / 0 - нет]";
       int a = correctInputk();
-      std::cin.ignore();
       if (a == 0) {
         break;
       }

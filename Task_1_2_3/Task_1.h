@@ -91,7 +91,7 @@ class Task_1 {
         // проверка что в числе всего одна '.'
         if (input[i] == '.' && dotFound) {
           ++last_i;
-          NumberFound = false;
+          //NumberFound = false;
           break;
         }
         // проверка что после первой '.' идет число, если нет то прекращаем цикл

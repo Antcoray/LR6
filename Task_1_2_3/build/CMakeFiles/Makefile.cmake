@@ -54,5 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/my_program.dir/DependInfo.cmake"
+  "CMakeFiles/Task_1_2_3.dir/DependInfo.cmake"
+  "CMakeFiles/AddressSan.dir/DependInfo.cmake"
+  "CMakeFiles/ThreadSan.dir/DependInfo.cmake"
   )

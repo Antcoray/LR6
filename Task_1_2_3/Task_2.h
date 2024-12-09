@@ -95,6 +95,7 @@ class Task_2 {
       int CounterforNewText = 0;
       char* input = CorrectInputCharArray(index);
       char* NewText = DeleteNonText(input, index, CounterforNewText);
+      std::cout << "Результат:\n";
       outputResult(NewText, CounterforNewText);
       std::cout << "Продолжить выполнение задания 2?\n";
       delete[] NewText;

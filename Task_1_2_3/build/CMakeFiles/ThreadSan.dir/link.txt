@@ -1,0 +1,1 @@
+/usr/bin/c++ -fsanitize=thread CMakeFiles/ThreadSan.dir/main.cpp.o -o ThreadSan

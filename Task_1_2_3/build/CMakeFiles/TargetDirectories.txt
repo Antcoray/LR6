@@ -1,3 +1,5 @@
-/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/build/CMakeFiles/my_program.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/build/CMakeFiles/Task_1_2_3.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/build/CMakeFiles/AddressSan.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/build/CMakeFiles/ThreadSan.dir
 /home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/build/CMakeFiles/edit_cache.dir
 /home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/build/CMakeFiles/rebuild_cache.dir

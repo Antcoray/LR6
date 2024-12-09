@@ -117,113 +117,73 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_program
+# Target rules for targets named Task_1_2_3
 
 # Build rule for target.
-my_program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_program
-.PHONY : my_program
+Task_1_2_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Task_1_2_3
+.PHONY : Task_1_2_3
 
 # fast build rule for target.
-my_program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/build
-.PHONY : my_program/fast
+Task_1_2_3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Task_1_2_3.dir/build.make CMakeFiles/Task_1_2_3.dir/build
+.PHONY : Task_1_2_3/fast
 
-Task_1.o: Task_1.cpp.o
-.PHONY : Task_1.o
+#=============================================================================
+# Target rules for targets named AddressSan
 
-# target to build an object file
-Task_1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_1.cpp.o
-.PHONY : Task_1.cpp.o
+# Build rule for target.
+AddressSan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AddressSan
+.PHONY : AddressSan
 
-Task_1.i: Task_1.cpp.i
-.PHONY : Task_1.i
+# fast build rule for target.
+AddressSan/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressSan.dir/build.make CMakeFiles/AddressSan.dir/build
+.PHONY : AddressSan/fast
 
-# target to preprocess a source file
-Task_1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_1.cpp.i
-.PHONY : Task_1.cpp.i
+#=============================================================================
+# Target rules for targets named ThreadSan
 
-Task_1.s: Task_1.cpp.s
-.PHONY : Task_1.s
+# Build rule for target.
+ThreadSan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ThreadSan
+.PHONY : ThreadSan
 
-# target to generate assembly for a file
-Task_1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_1.cpp.s
-.PHONY : Task_1.cpp.s
+# fast build rule for target.
+ThreadSan/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThreadSan.dir/build.make CMakeFiles/ThreadSan.dir/build
+.PHONY : ThreadSan/fast
 
-Task_1_2_3.o: Task_1_2_3.cpp.o
-.PHONY : Task_1_2_3.o
-
-# target to build an object file
-Task_1_2_3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_1_2_3.cpp.o
-.PHONY : Task_1_2_3.cpp.o
-
-Task_1_2_3.i: Task_1_2_3.cpp.i
-.PHONY : Task_1_2_3.i
-
-# target to preprocess a source file
-Task_1_2_3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_1_2_3.cpp.i
-.PHONY : Task_1_2_3.cpp.i
-
-Task_1_2_3.s: Task_1_2_3.cpp.s
-.PHONY : Task_1_2_3.s
-
-# target to generate assembly for a file
-Task_1_2_3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_1_2_3.cpp.s
-.PHONY : Task_1_2_3.cpp.s
-
-Task_2.o: Task_2.cpp.o
-.PHONY : Task_2.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-Task_2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_2.cpp.o
-.PHONY : Task_2.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Task_1_2_3.dir/build.make CMakeFiles/Task_1_2_3.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressSan.dir/build.make CMakeFiles/AddressSan.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThreadSan.dir/build.make CMakeFiles/ThreadSan.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-Task_2.i: Task_2.cpp.i
-.PHONY : Task_2.i
-
-# target to preprocess a source file
-Task_2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_2.cpp.i
-.PHONY : Task_2.cpp.i
-
-Task_2.s: Task_2.cpp.s
-.PHONY : Task_2.s
-
-# target to generate assembly for a file
-Task_2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_2.cpp.s
-.PHONY : Task_2.cpp.s
-
-Task_3.o: Task_3.cpp.o
-.PHONY : Task_3.o
-
-# target to build an object file
-Task_3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_3.cpp.o
-.PHONY : Task_3.cpp.o
-
-Task_3.i: Task_3.cpp.i
-.PHONY : Task_3.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-Task_3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_3.cpp.i
-.PHONY : Task_3.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Task_1_2_3.dir/build.make CMakeFiles/Task_1_2_3.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressSan.dir/build.make CMakeFiles/AddressSan.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThreadSan.dir/build.make CMakeFiles/ThreadSan.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-Task_3.s: Task_3.cpp.s
-.PHONY : Task_3.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-Task_3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/Task_3.cpp.s
-.PHONY : Task_3.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Task_1_2_3.dir/build.make CMakeFiles/Task_1_2_3.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressSan.dir/build.make CMakeFiles/AddressSan.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThreadSan.dir/build.make CMakeFiles/ThreadSan.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -233,19 +193,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_program"
-	@echo "... Task_1.o"
-	@echo "... Task_1.i"
-	@echo "... Task_1.s"
-	@echo "... Task_1_2_3.o"
-	@echo "... Task_1_2_3.i"
-	@echo "... Task_1_2_3.s"
-	@echo "... Task_2.o"
-	@echo "... Task_2.i"
-	@echo "... Task_2.s"
-	@echo "... Task_3.o"
-	@echo "... Task_3.i"
-	@echo "... Task_3.s"
+	@echo "... AddressSan"
+	@echo "... Task_1_2_3"
+	@echo "... ThreadSan"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
