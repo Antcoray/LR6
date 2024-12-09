@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 
 class Task_1 {
@@ -62,8 +64,6 @@ class Task_1 {
                   int& last_i) {
     bool NumberFound = false;
     bool dotFound = false;
-    bool minusFound = false;
-    bool plusFound = false;
 
     for (int i = last_i; i <= index; ++i) {
       last_i = i;

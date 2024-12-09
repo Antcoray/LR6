@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 
 class Task_3 {
@@ -113,7 +115,6 @@ class Task_3 {
     while (true) {
       std::cin.ignore();
       int index = 0;
-      int CounterforNewText = 0;
       char* input = CorrectInputCharArray(index);
       char* NewText = nullptr;
       std::cout << "Введите номер функции, которую хотите использовать\n [1 - "

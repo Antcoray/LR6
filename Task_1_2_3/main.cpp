@@ -1,7 +1,8 @@
 #include <iostream>
 
-#include "Tasks.h"
-
+#include "Task_1.h"
+#include "Task_2.h"
+#include "Task_3.h"
 int correctInputk(int m = 1) {
   int x = 0;
   bool incorrectInput = false;
