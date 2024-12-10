@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Task_3_TESTS.dir/Task_3_TESTS.cpp.o -o Task_3_TESTS  -lgtest -lgtest_main

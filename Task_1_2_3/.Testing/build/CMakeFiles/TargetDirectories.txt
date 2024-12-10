@@ -1,0 +1,6 @@
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/.Testing/build/CMakeFiles/Task_1_TESTS.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/.Testing/build/CMakeFiles/Task_2_TESTS.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/.Testing/build/CMakeFiles/Task_3_TESTS.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/.Testing/build/CMakeFiles/test.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/.Testing/build/CMakeFiles/edit_cache.dir
+/home/anton/LABS/453501/ОАиП/LR6/Task_1_2_3/.Testing/build/CMakeFiles/rebuild_cache.dir
